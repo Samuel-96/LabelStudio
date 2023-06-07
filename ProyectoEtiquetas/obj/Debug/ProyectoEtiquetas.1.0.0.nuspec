@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ProyectoEtiquetas</id>
+    <version>1.0.0</version>
+    <authors>ProyectoEtiquetas</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="Extended.Wpf.Toolkit" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="MySql.Data" version="8.0.32.1" exclude="Build,Analyzers" />
+        <dependency id="MySqlConnector" version="2.2.5" exclude="Build,Analyzers" />
+        <dependency id="Pdfium.Net.SDK" version="4.81.2704" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="7.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/logo.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\USUARIO\Source\Repos\SamuelCPFarma\proyecto-etiquetas\ProyectoEtiquetas\ProyectoEtiquetas\bin\x64\Debug\net6.0-windows7.0\ProyectoEtiquetas.runtimeconfig.json" target="lib\net6.0-windows7.0\ProyectoEtiquetas.runtimeconfig.json" />
+    <file src="C:\Users\USUARIO\Source\Repos\SamuelCPFarma\proyecto-etiquetas\ProyectoEtiquetas\ProyectoEtiquetas\bin\x64\Debug\net6.0-windows7.0\ProyectoEtiquetas.dll" target="lib\net6.0-windows7.0\ProyectoEtiquetas.dll" />
+    <file src="C:\Users\USUARIO\Source\Repos\SamuelCPFarma\proyecto-etiquetas\ProyectoEtiquetas\ProyectoEtiquetas\logo.ico" target="content\logo.ico" />
+    <file src="C:\Users\USUARIO\Source\Repos\SamuelCPFarma\proyecto-etiquetas\ProyectoEtiquetas\ProyectoEtiquetas\logo.ico" target="contentFiles\any\net6.0-windows7.0\logo.ico" />
+  </files>
+</package>

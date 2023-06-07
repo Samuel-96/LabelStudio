@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEtiqueta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Etiqueta>
+    <Texto>AMLODIPINO 1MG/ML SUSPENSION ORAL</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>125</posX>
+    <posY>NaN</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>Caducidad:</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>20</posX>
+    <posY>50</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>31/03/2023</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>85</posX>
+    <posY>50</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>Vía administración:</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>20</posX>
+    <posY>80</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>placeholder</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>125</posX>
+    <posY>80</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>Cantidad para: </Texto>
+    <TamFuente>12</TamFuente>
+    <posX>20</posX>
+    <posY>110</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>Número de orden: </Texto>
+    <TamFuente>12</TamFuente>
+    <posX>250</posX>
+    <posY>50</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>0002/01/23</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>355</posX>
+    <posY>50</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>Unidad: </Texto>
+    <TamFuente>12</TamFuente>
+    <posX>250</posX>
+    <posY>80</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+  <Etiqueta>
+    <Texto>mL</Texto>
+    <TamFuente>12</TamFuente>
+    <posX>300</posX>
+    <posY>80</posY>
+    <Fuente>Segoe UI</Fuente>
+    <Grosor />
+    <Estilo />
+    <Color xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Color>
+  </Etiqueta>
+</ArrayOfEtiqueta>

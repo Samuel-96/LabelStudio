@@ -1,0 +1,144 @@
+﻿<Window x:Class="ProyectoEtiquetas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:Wpf="clr-namespace:Patagames.Pdf.Net.Controls.Wpf;assembly=Patagames.Pdf.Wpf"
+        xmlns:Toolbars="clr-namespace:Patagames.Pdf.Net.Controls.Wpf.ToolBars;assembly=Patagames.Pdf.Wpf"
+        xmlns:local="clr-namespace:ProyectoEtiquetas"
+        mc:Ignorable="d"
+        Title="Inicio" Height="556" Width="1068"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <DockPanel>
+        <!--MENU SUPERIOR-->
+        <Menu DockPanel.Dock="Top" Background="#0A659A">
+            <MenuItem Header="_Archivo" Foreground="White">
+                <MenuItem Header="_Nuevo" Click="Nuevo_Click" Foreground="Black"/>
+                <MenuItem Header="_Guardar plantilla" Click="GuardarPlantilla_Click" Foreground="Black"/>
+                <MenuItem Header="_Cargar plantilla" Click="CargarPlantilla_Click" Foreground="Black"/>
+            </MenuItem>
+
+            <MenuItem Header="_Opciones" Foreground="White">
+                <MenuItem Header="_Salir del programa" Click="CerrarPrograma_Click" Foreground="Black"/>
+                <MenuItem Header="_Limpiar etiqueta" Click="btnLimpiarCanvas_Click" Foreground="Black"/>
+                <MenuItem x:Name="AddLabel" Header="Añadir texto a etiqueta" Foreground="Black" Click="AddLabel_Click"/>
+                <MenuItem x:Name="itemMargenes" Header="Personalizar márgenes de la etiqueta" Foreground="Black" Click="itemMargenes_Click"/>
+                <MenuItem Header="_Cambiar color de fondo de la etiqueta" Foreground="Black">
+                    <xctk:ColorPicker x:Name="colorPicker"
+                    SelectedColorChanged="ColorPicker_SelectedColorChanged"
+                    AvailableColorsSortingMode="HueSaturationBrightness"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    Width="100"
+                    Height="Auto"/>
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Ayuda" Foreground="White">
+                <MenuItem Header="Manual de usuario" Click="ManualUsuario_Click" Foreground="Black"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Height="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- columna del canvas-->
+                <ColumnDefinition Width="5" />
+                <!-- columna del gridsplitter-->
+                <ColumnDefinition Width="359" />
+                <!-- columna del listbox-->
+            </Grid.ColumnDefinitions>
+
+            <!-- CONTENIDO PRINCIPAL DEL CANVAS -->
+            <Rectangle Grid.Column="2" Fill="#0A659A" Margin="0,0,5,2" VerticalAlignment="Bottom" Height="54"/>
+            <ScrollViewer x:Name="scrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Border x:Name="bordeLimitesCanvas" BorderBrush="Black" Background="LightGray" BorderThickness="1" DockPanel.Dock="Left" Margin="10">
+                    <Canvas x:Name="canvas" Background="White" Margin="0,0,0,0" Drop="Canvas_Drop" AllowDrop="True" Loaded="canvas_Loaded" SnapsToDevicePixels="True" Width="500" Height="420" ClipToBounds="True" MouseWheel="canvas_MouseWheel">
+
+                        <Label x:Name="lblNombreProcedimiento" Content="Nombre del procedimiento" Tag="proced"
+                                   HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="64" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" MouseLeftButtonUp="lblNombreProcedimiento_MouseLeftButtonUp" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" Canvas.Top="19" />
+
+                        <Label x:Name="lblFechaCaducidad" Content="Caducidad:" Tag="lblFechaCaducidad"
+                                   HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="16" Canvas.Top="63" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" FontSize="10"/>
+
+                        <Label x:Name="lblFechaCaducidadPlaceholder" Content="placeholder" Tag="fechacaduc"
+                                   HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="79" Canvas.Top="63" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" FontSize="10"/>
+
+                        <Label x:Name="lblViaAdm" Content="Vía administración:"  Tag="lblViaAdmin"
+                                   HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="127" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" FontSize="10" Canvas.Left="13"/>
+
+                        <Label x:Name="lblCantidad" Content="Cantidad: " Tag="lblCantidad"
+                                   HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="185" Canvas.Top="127" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" FontSize="10"/>
+
+                        <Label x:Name="lblNumOrden" Tag="lblNumOrden" Content="Número de orden: " VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="193" Canvas.Top="63" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" FontSize="10" RenderTransformOrigin="0.511,0.567"/>
+
+                        <Label x:Name="lblNumOrdenPlaceholder" Tag="numorden" Content="placeholder" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="292" Canvas.Top="63" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" FontSize="10"/>
+                        <Label x:Name="lblViadminPlaceholder" Tag="viaadmin" Content="placeholder" Canvas.Left="106" Canvas.Top="127" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="10"/>
+                        <Label x:Name="lblCantidadPlaceholder" Tag="cantelabreal" Content="placeholder" Canvas.Left="231" Canvas.Top="127" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="10"/>
+                        <Label x:Name="lblPaciente" Tag="NombrePaciente" Content="Paciente:" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10" Canvas.Left="61" Canvas.Top="1"/>
+
+                        <Label x:Name="componente1" Content="Componente1:"  Tag="componente1"
+                                    Canvas.Left="15" Canvas.Top="80" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="10"/>
+
+                        <Label x:Name="componente2" Content="Componente2:"  Tag="componente2"
+                                    Canvas.Left="15" Canvas.Top="92" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10"/>
+
+                        <Label x:Name="componente3" Content="Componente3:" Tag="componente3"
+                                    Canvas.Left="15" Canvas.Top="108" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="10"/>
+
+                        <Label x:Name="componente4" Content="Componente4:" Tag="componente4"
+                                    Canvas.Left="251" Canvas.Top="80" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="10"/>
+
+                        <Label x:Name="componente5" Content="Componente5:" Tag="componente5"
+                                    Canvas.Left="251" Canvas.Top="92" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="10"/>
+
+                        <Label x:Name="componente6" Content="Componente6:" Tag="componente6"
+                                    Canvas.Left="251" Canvas.Top="108" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="10"/>
+
+                        <Label x:Name="lblHospital" Content="Nombre hospital" Tag="lblHospital"
+                                    Canvas.Left="231" Canvas.Top="1" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10" RenderTransformOrigin="0.506,0.61"/>
+
+                        <Label x:Name="lblConservacion" Content="Conservación:" Tag="lblConservacion"
+                                    Canvas.Left="18" Canvas.Top="45" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="10"/>
+
+                        <Label x:Name="lblObservaciones" Content="Observaciones:" Tag="lblObservaciones"
+                                    Canvas.Left="193" Canvas.Top="45" MouseUp="Label_MouseUp" MouseDown="Label_MouseDown" MouseMove="Label_MouseMove" MouseDoubleClick="lbl_DoubleClick" PreviewMouseLeftButtonDown="lbl_PreviewMouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10"/>
+                    </Canvas>
+                </Border>
+            </ScrollViewer>
+
+            <!--GRIDSPLITTER PARA DIVIDIR AMBOS PANELES-->
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+
+            <!-- PANEL LATERAL CON EL LISTBOX -->
+            <ScrollViewer Grid.Column="2" DockPanel.Dock="Right" Margin="0,0,0,59">
+                <StackPanel Orientation="Vertical">
+
+                    <Label Content="Buscar..:" Grid.Column="0" VerticalAlignment="Center" Margin="5" FontWeight="Bold"/>
+                    <TextBox x:Name="tbSearch"  Grid.Column="0" Width="200" Margin="5" TextChanged="tbSearch_TextChanged"/>
+                    <TabControl>
+                        <TabItem Header="Texto" Background="CornflowerBlue">
+                            <ListBox x:Name="listBoxProced">
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="{x:Type ListBoxItem}">
+                                        <EventSetter Event="UIElement.PreviewMouseLeftButtonDown" Handler="ListBoxItem_PreviewMouseLeftButtonDown"/>
+                                        <EventSetter Event="UIElement.PreviewMouseMove" Handler="ListBoxItem_PreviewMouseMove"/>
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                            </ListBox>
+                        </TabItem>
+                    </TabControl>
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button x:Name="btnImprimir" Grid.Column="2" Content="Imprimir" Margin="0,0,20,14" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="30" Width="68" FontFamily="Nirmala UI" Click="btnImprimir_Click" Background="White"/>
+            <Button x:Name="btnPrevisualizar" Grid.Column="2" Content="Previsualizar etiqueta" Margin="0,0,106,14" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="30" Width="124" FontFamily="Nirmala UI" Click="btnPrevisualizar_Click" Background="White"/>
+
+        </Grid>
+    </DockPanel>
+
+
+</Window>
